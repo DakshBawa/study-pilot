@@ -1,0 +1,6 @@
+/* Floating dock + ambient glow */
+body::before { content: ""; position: fixed; inset: -20% -10% auto auto; width: 520px; height: 520px; background: radial-gradient(circle, #8b5cf633, transparent 65%); pointer-events: none; z-index: -1; }
+.dock { background: #151929d9; backdrop-filter: blur(14px); border: 1px solid #272d4a; box-shadow: 0 10px 40px #000a; }
+.dock-item { transition: transform .15s ease; }
+.dock-item:hover { transform: translateY(-3px); }
+@media (prefers-reduced-motion: reduce) { .dock-item:hover { transform: none; } }

@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply bg-night font-sans text-slate-200 antialiased; }
+:focus-visible { outline: 2px solid #c6f432; outline-offset: 2px; }
+
+@layer components {
+  .panel { @apply rounded-2xl border border-edge bg-panel p-5; }
+  .btn { @apply inline-flex items-center justify-center rounded-xl bg-lime px-4 py-2.5 text-sm font-semibold text-night transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-40; }
+  .btn-alt { @apply inline-flex items-center justify-center rounded-xl border border-edge bg-white/5 px-4 py-2.5 text-sm font-semibold text-slate-200 hover:bg-white/10 disabled:opacity-40; }
+  .input { @apply w-full rounded-xl border border-edge bg-night px-3 py-2.5 text-sm text-slate-100 placeholder:text-slate-500; }
+}
